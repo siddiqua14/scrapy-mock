@@ -1,0 +1,14 @@
+docker exec -it postgres_db psql -U scraper_user -d scraper_db
+
+Validate the Setup
+Check the Database Table: After scraping, you can log into PostgreSQL to verify that the products table contains the product data:
+
+bash
+Copy code
+docker exec -it postgres_db psql -U scraper_user -d scraper_db
+Run the query:
+
+sql
+Copy code
+\dt
+SELECT * FROM products;
